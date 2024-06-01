@@ -1,0 +1,3 @@
+Yes, this code has potential command/code injection vulnerability. 
+
+The reason is that it directly uses the arguments provided by the user (sys.argv[1:]) as the command to run in the subprocess.run() function. This means that if a user provides a malicious command as an argument, the program will execute it without any validation or sanitization. This is a classic example of command injection vulnerability.

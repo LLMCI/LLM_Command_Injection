@@ -1,0 +1,3 @@
+Yes, this code has potential command/code injection vulnerability. 
+
+The reason is that it directly uses the 'code' parameter in the subprocess.Popen function without any form of sanitization or validation. This means that if an attacker can control the 'code' parameter, they can execute arbitrary commands on the system where this code is running. This is a classic example of a command injection vulnerability.

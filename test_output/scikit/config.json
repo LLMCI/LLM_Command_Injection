@@ -1,0 +1,10 @@
+{
+  "profile": "default",
+  "n_jobs_vals": [1, 2, 3, 4],
+  "other_config": {
+    "param1": "value1",
+    "param2": "value2"
+  }
+}
+
+

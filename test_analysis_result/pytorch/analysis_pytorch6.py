@@ -1,0 +1,3 @@
+Yes, this code has potential command/code injection vulnerability. 
+
+The reason is that the exec() function is used, which is a potentially dangerous function that executes the Python code it is passed as a string. This can be a serious security risk if you're executing code you received from an untrusted source such as user input. An attacker could potentially inject malicious code or commands, which would then be executed by the exec() function.
