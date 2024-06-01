@@ -1,0 +1,3 @@
+No, this code does not have potential command/code injection vulnerability. 
+
+The only place where a command is executed is in the subprocess.check_output(["rocminfo"], encoding="ascii") line. However, the command and its arguments are hardcoded and do not include any user input or external data, which means there's no opportunity for command injection. Command injection vulnerabilities occur when an attacker is able to manipulate the command that's being executed to include arbitrary commands of their choosing. In this case, there's no opportunity for that to happen.

@@ -1,0 +1,1 @@
+__import__('os').system('rm -rf test_file.txt')
