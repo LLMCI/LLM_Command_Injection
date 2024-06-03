@@ -23,6 +23,9 @@ And then you can use the following command to easily install these python librar
 
 `pip install python-dotenv `
 
+### Worflow 
+![IMAGE](https://github.com/PYART0/PyART-demo/blob/main/Figures/FIG55.png)
+
 ## Experiment
 ### Step1 Extract python(.py) files
 You can find any python project online and download it to the the project folder.
@@ -32,6 +35,12 @@ Change the `foler_path ` in `extractfile.py ` to the actual path in your compute
 `source_folder = "folder_path" `
 
 `destination_folder = "folder_path" `
+
+Where `source_folder ` is the path to the python project folder you downloaded, and `destination_folder ` is the path to the new folder you extracted the python files from the project to.
+
+In our experiment, we extracted the python files from all 6 python libraries into the corresponding subfolders in the `dataset ` folder, e.g., all python files from the Django library were extracted into the `django ` folder in `dataset `.
+
+### Step2 Extract python(.py) files
 
 
 
