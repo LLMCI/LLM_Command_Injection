@@ -23,8 +23,15 @@ And then you can use the following command to easily install these python librar
 
 `pip install python-dotenv `
 
-### Worflow 
-![IMAGE](https://github.com/PYART0/PyART-demo/blob/main/Figures/FIG55.png)
+### Worflow
+Here is the workflow for our experiment:
+![IMAGE](https://github.com/LLMCI/LLM_Command_Injection/blob/main/process_test.png)
+Our experiment consists of five steps:
+- Filtering python files 
+- Filtering candidate functions(Python functions containing methods that could lead to command injection vulnerabilities)
+- Let GPT4 determine if there is a command injection vulnerability in the candidate functions
+- Asking GPT4 generate security tests for functions that it determines are vulnerable
+- Manually modify and run the security tests
 
 ## Experiment
 ### Step1 Extract python(.py) files
