@@ -25,7 +25,7 @@ And then you can use the following command to easily install these python librar
 
 ### Worflow
 Here is the workflow for our experiment:
-![IMAGE](https://github.com/LLMCI/LLM_Command_Injection/blob/main/process_test.png)
+![IMAGE](https://github.com/LLMCI/LLM_Command_Injection/blob/main/workflow.png)
 Our experiment consists of five steps:
 - Filtering python files 
 - Filtering candidate functions(Python functions containing methods that could lead to command injection vulnerabilities)
