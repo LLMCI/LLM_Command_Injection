@@ -10,12 +10,17 @@ Our code can work on Ubuntu 22.04 OS and requires:
 - openai
 
 The experiments are performed on Ubuntu OS. The operation system can be downloaded on https://ubuntu.com/download/desktop, or you can download *.iso file and install it on vmware tools if you want to use windows system. There is Python installed in ubuntu os, you just need to check its version. You can use the following command to check the python version:
+
 `sudo apt-get update `
+
 `sudo apt-get upgrade `
+
 `python --version `
 
 And then you can use the following command to easily install these python libraries on Ubuntu: 
+
 `pip install openai `
+
 `pip install python-dotenv `
 
 ## Experiment
@@ -25,6 +30,7 @@ You can find any python project online and download it to the the project folder
 Change the `foler_path ` in `extractfile.py ` to the actual path in your computer:
 
 `source_folder = "folder_path" `
+
 `destination_folder = "folder_path" `
 
 
