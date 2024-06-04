@@ -105,7 +105,9 @@ Secondly, changing three `file_path ` to the actual path in the dvice.
          output_file.write(testcase_result)
 
 The first one need to change it to the file pathes in the `test_dataset `, such as `test_dataset/django/django1.py `, this is for letting GPT-4 read the contents of these candidate functions.
+
 The second one is for storing the analysis results of GPT-4 to facilitate subsequent analysis. We stored it in the `test_analysis_result `.
+
 The third one is for storing the security cases which GPT-4 generated. We stored it in the `test_output `.
 
 Running `extractfile.py ` by the following command to execute the code: 
