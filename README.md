@@ -57,10 +57,45 @@ Change the `foler_path ` in `extractfile.py ` to the actual path in your compute
 
 Where `source_folder ` is the path to the python project folder you downloaded, and `destination_folder ` is the path to the new folder you extracted the python files from the project to.
 
+After that, running `extractfile.py ` by the following command to execute this step.
+
+`python3 extractfile.py `
+
 In our experiment, we extracted the python files from all 6 python libraries into the corresponding subfolders in the `dataset ` folder, e.g., all python files from the Django library were extracted into the `django ` folder in `dataset `.
 
-### Step2 Extract python(.py) files
+### Step2 Extract candidate function 
+Step2 is finding the candidate function from the python files in each python projects we extracted in the first step.
 
+Change the `foler_path ` in `finding.py ` to the actual path in your computer
 
+`directory = 'folder_path' `
+
+The running `finding.py ` by the following command to find candidate functions in all 6 python projects.
+
+`python3 finding.py `
+
+We need to find all the python functions which inclued the following methods(These methods can easily lead to command injection vulnerabilities): 
+
+        'eval', 'exec', 'subprocess.call', 'subprocess.run', 'subprocess.Popen', 'subprocess.check_output', 'os.popen', 'os.system', 
+        'os.spawnl', 'os.spawnle', 'os.spawnlp', 'os.spawnlpe', 'os.spawnv', 'os.spawnve', 'os.spawnvp', 'os.spawnvpe', 'os.posix_spawn()', 
+        'os.posix_spawnp()', 'os.execl', 'os.execle', 'os.execlp', 'os.execlpe', 'os.execv', 'os.execve', 'os.execvp', 'os.execvpe'
+
+We named these function as "candidate functions"
+
+In our experiments, we store these candidate functions into the `test_dataset ` folder. Each file include on candidate function. 
+
+### Step3 and step4 Let GPT4 determine if there is a command injection vulnerability in the candidate functions and generate security tests for functions that it determines are vulnerable
+
+`openai.api_key  = 'your LLM key' `
+
+     with open("file_path", "r") as file:
+
+     with open("file_path", "w") as output_file:
+         output_file.write(analysis_result)
+        
+     with open("file_path", "w") as output_file:
+         output_file.write(testcase_result)
+
+### Step5 Manually modify and run the security tests
 
 
