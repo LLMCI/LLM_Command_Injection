@@ -9,6 +9,8 @@ Our code can work on Ubuntu 22.04 OS and requires:
 - dotenv
 - openai
 
+In addition, you need to sign up an openai account and add payment methods to get the permission to using the openai API. You can do these on https://openai.com/.
+
 The experiments are performed on Ubuntu OS. The operation system can be downloaded on https://ubuntu.com/download/desktop, or you can download *.iso file and install it on vmware tools if you want to use windows system. There is Python installed in ubuntu os, you just need to check its version. You can use the following command to check the python version:
 
 `sudo apt-get update `
@@ -35,7 +37,16 @@ Our experiment consists of five steps:
 
 ## Experiment
 ### Step1 Extract python(.py) files
-You can find any python project online and download it to the the project folder.
+In our experiments, we selected six well-known python third-party libraries (Django, Flask, TensorFlow, Scikit-learn, PyTorch and Langchain) to do the test. 
+The following version numbers are the ones of the projects used in the experiments：
+     Django 4.2.7 
+     Flask 3.0.0 
+     Langchain v0.0.330 
+     Tensorflow 2.14.0 
+     Scikit-learn 1.3.2 
+     PyTorch 2.1
+
+We download them to the `python_projects` folder. But you can find any python project online and download it to the `python_projects` folder.
 
 Change the `foler_path ` in `extractfile.py ` to the actual path in your computer:
 
