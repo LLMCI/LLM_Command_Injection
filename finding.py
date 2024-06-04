@@ -22,7 +22,9 @@ def find_files_with_methods(directory, methods):
 
 def main():
     directory = 'folder_path'  
-    methods_to_search = ['eval', 'exec', 'subprocess.call', 'subprocess.run', 'subprocess.Popen', 'subprocess.check_output', 'os.popen', 'os.system', 'os.spawnl', 'os.spawnle', 'os.spawnlp', 'os.spawnlpe', 'os.spawnv', 'os.spawnve', 'os.spawnvp', 'os.spawnvpe', 'os.execl', 'os.execle', 'os.execlp', 'os.execlpe', 'os.execv', 'os.execve', 'os.execvp', 'os.execvpe' ]
+    methods_to_search = ['eval', 'exec', 'subprocess.call', 'subprocess.run', 'subprocess.Popen', 'subprocess.check_output', 'os.popen', 'os.system', 
+                         'os.spawnl', 'os.spawnle', 'os.spawnlp', 'os.spawnlpe', 'os.spawnv', 'os.spawnve', 'os.spawnvp', 'os.spawnvpe', 'os.posix_spawn()', 
+                         'os.posix_spawnp()', 'os.execl', 'os.execle', 'os.execlp', 'os.execlpe', 'os.execv', 'os.execve', 'os.execvp', 'os.execvpe' ]
 
     matched_files = find_files_with_methods(directory, methods_to_search)
 
