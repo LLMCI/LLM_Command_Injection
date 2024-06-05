@@ -12,18 +12,18 @@ Our code can work on Ubuntu 22.04 OS and requires:
 In addition, you need to sign up an openai account and add payment methods to get the permission to using the openai API. You can do these on https://openai.com/.
 
 The experiments are performed on Ubuntu OS. The operation system can be downloaded on https://ubuntu.com/download/desktop, or you can download *.iso file and install it on vmware tools if you want to use windows system. There is Python installed in ubuntu os, you just need to check its version. You can use the following command to check the python version:
-
-   sudo apt-get update
-
-   sudo apt-get upgrade 
-
-   python --version
+    
+    sudo apt-get update
+    
+    sudo apt-get upgrade 
+    
+    python --version
 
 And then you can use the following command to easily install these python libraries on Ubuntu: 
 
-   pip install openai
-
-   pip install python-dotenv
+    pip install openai
+     
+    pip install python-dotenv
 
 ### Worflow
 Here is the workflow for our experiment:
