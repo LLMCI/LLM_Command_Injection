@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 from tensorflow.python.framework import test_util
+from tensorflow.lite.tools import test_utils
 
 
 class XxdOutputToBytesTest(test_util.TensorFlowTestCase):
