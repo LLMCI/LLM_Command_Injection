@@ -1,6 +1,3 @@
-Here is the security test code for the function:
-
-```python
 import os
 import unittest
 from unittest.mock import patch
@@ -37,6 +34,3 @@ class TestGetModel(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```
-
-This test code uses the unittest and unittest.mock libraries to create a test case for the get_model function. The os.system function is mocked so that it doesn't actually execute any commands. The test case checks that a dangerous command is not included in the arguments passed to os.system. If the dangerous command is found in the arguments, the test case will fail.
