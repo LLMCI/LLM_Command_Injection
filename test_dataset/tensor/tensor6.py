@@ -1,3 +1,5 @@
+from tensorflow.python.tools import saved_model_cli
+
 def preprocess_input_exprs_arg_string(input_exprs_str, safe=True):
   input_dict = {}
 
