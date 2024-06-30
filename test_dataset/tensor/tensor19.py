@@ -1,3 +1,21 @@
+from tensorflow.python.platform import resource_loader
+import contextlib
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+
+@contextlib.contextmanager
+def TemporaryDirectoryResource():
+  temporary = tempfile.mkdtemp()
+  try:
+    yield temporary
+  finally:
+    shutil.rmtree(temporary)
+
 class Converter:
 
    def __init__(self):
