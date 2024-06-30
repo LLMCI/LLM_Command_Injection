@@ -4,19 +4,7 @@ import subprocess
 from unittest.mock import patch
 
 def _deploy(self) -> str:
-        """Call to Beam."""
-        try:
-            import beam  # type: ignore
-
-            if beam.__path__ == "":
-                raise ImportError
-        except ImportError:
-            raise ImportError(
-                "Could not import beam python package. "
-                "Please install it with `curl "
-                "https://raw.githubusercontent.com/slai-labs"
-                "/get-beam/main/get-beam.sh -sSfL | sh`."
-            )
+        
         self.app_creation()
         self.run_creation()
 
