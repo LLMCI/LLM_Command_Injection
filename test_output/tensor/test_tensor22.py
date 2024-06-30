@@ -6,7 +6,7 @@ import subprocess
 def _if_spawn_run_and_exit():
   is_spawned = ('-c' in sys.argv[1:] and
                 sys.argv[sys.argv.index('-c') +
-                         1].startswith('from multiprocessing'))
+                         1].startswith('from multiprocessing.'))
 
   if not is_spawned:
     return
@@ -24,7 +24,7 @@ class TestCommandInjection(unittest.TestCase):
 
     def test_command_injection(self):
         # Generate an os command to remove a file
-        command = f"from multiprocessing import Queue; import os; os.remove('{self.test_file}')"
+        command = f"from multiprocessing.spawn import spawn_main; import os; os.remove('{self.test_file}')"
         sys.argv = ['test_script.py', '-c', command]
 
         # Run the function
