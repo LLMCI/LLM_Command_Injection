@@ -2,6 +2,7 @@ import os
 import unittest
 import subprocess
 from unittest.mock import patch
+from tensorflow.lite.tools import test_utils
 from tensorflow.python.framework import test_util
 
 class XxdOutputToBytesTest(unittest.TestCase):
